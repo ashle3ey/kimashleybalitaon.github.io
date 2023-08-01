@@ -15,12 +15,15 @@
     /*list-style: none;*/
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    list-style: none;
 
 }
 body{
     font-family: montserrat;
     background: #002B5B;
     overflow-x: hidden;
+    width: 100%;
+    height: 100%;
 }
 .main-width{
     width: 1280px;
@@ -35,7 +38,6 @@ body{
     position: relative;
 }
 header{
-    height: 10%;
     width: 100%;
     top: 0;
     right: 0;
@@ -45,7 +47,7 @@ header{
     align-items: center;
     z-index: 1000;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 1px 1%;
     background-color: #002a5b70;
     transition: .3s;
 }
@@ -91,6 +93,7 @@ nav .hamb span:nth-child(2){
 nav .nav-list{
     list-style: none;
     padding-bottom: 1rem;
+    display: flex;
 }
 nav .nav-list a{
     margin: 1rem 0;
@@ -258,13 +261,13 @@ span{
 }*/
 
 .container1{
-    background-color: #01336b;
+    background-color: #002B5B;
 }
 
 .about-text{
     display: inline;
-    padding-right: 70vh;
-    margin: 50px;
+    padding-right: 90vh;
+    /*margin: 100%;*/
     justify-content: space-around;
 }
 
@@ -492,14 +495,15 @@ main.rows{
 
 #services{
         padding: 100px;
-        background: #01336b;
-        margin-bottom: 5rem;
+       /* background: #01336b;
+        margin-bottom: 5px;
+        padding-top: 5rem;*/
 }
 
 .main-text{
     text-align: center;
     padding: 50px;
-    padding-top: 7rem;
+    padding-top: 5rem;
 }
 
 .main-text h2{
@@ -562,10 +566,11 @@ main.rows{
 }
 
 /*projects*/
+
 .main-text1{
     text-align: center;
     padding: 50px;
-    padding-top: 7rem;
+    padding-top: 4rem;
 }
 
 .main-text1 h2{
@@ -625,7 +630,7 @@ main.rows{
 
 
 #projects{
-    background-color: #01336b;
+    
     padding: 50px;
 
 }
@@ -637,6 +642,7 @@ main.rows{
     background-color: #002B5B;
     /*padding: 100px;*/
     height: 100vh;
+    padding-top: 7rem;
 }
 
 
@@ -789,12 +795,17 @@ main.rows{
         font-size: 30px;
         line-height: 50px;
         font-family: 'Engagement', cursive;
-        padding:20px; 
-        margin-left: 10px; 
+        padding:10px; 
+        margin-left: -16px;
+        margin-bottom: 5rem;
     }
     nav .hamb{
         display: initial;
         margin-top: 20px;
+        margin-right: 10px;
+    left: 300px;
+    top: 10px;
+    
     }
     .click{
         top: 46px;
@@ -848,8 +859,11 @@ main.rows{
     }
 }
 
-@media(max-width:768px)
+@media screen and (max-width:600px)
 {
+    .body{
+        width: 100%;
+    }
     .container{
         flex-direction: column;
         padding-top: 1rem;
@@ -857,18 +871,19 @@ main.rows{
     .hero-text{
         height: 25rem;
         padding: 45px 0px;
-        padding-right: 5rem;
+        padding-right: 50px;
     }
     .container .hero-text h1{
         font-size: 45px;
     }
     .container .col-2{
-        padding-right: 12rem;
+        padding-right: 8rem;
     }
     .container .col-2 .profile{
         height: 300px;
         width: 300px;
         border-radius: 50%;
+
     }
     .color-box{
         position: absolute;
@@ -876,13 +891,13 @@ main.rows{
         top: 0;
         background: #8FE3CF;
         height: 15%;
-        width: 45%;
+        width: 10%;
         z-index: -1;
         transform: translateX(150px);
     }
 }
 
-@media(max-width:768px)
+@media screen and (max-width:600px)
 {
     .container{
         flex-direction: column;
@@ -918,7 +933,7 @@ main.rows{
 
 }
 
-@media screen and(max-width:1200px)
+@media screen and (max-width:600px)
 {
     .container2 .sub-title{
        width: 100%;
@@ -985,6 +1000,7 @@ main.rows{
 
     .contact{
         padding: 30px 30px;
+        padding-top: 7rem;
     }
 }
 
@@ -1009,6 +1025,7 @@ main.rows{
     .skill-icon{
         width: 90px;
     }
+    
 
 }
 
@@ -1016,5 +1033,59 @@ main.rows{
     .container6{
         grid-template-columns: 1fr;
     }
+    header{
+        height: 80px;
+        justify-content: space-between;
+        padding-left: 1rem;
+        padding: 15px 3%;
+        transition: .2s;
+    }
+    .logo{
+        padding-top: 7rem;
+    }
+
+}
+
+@media screen and (max-width:600px)
+{
+
+.main-text{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    grid-gap: 50px;
+    justify-content: center;
+}
+
+.services-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    grid-gap: 50px;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+}
+
+@media screen and (max-width:600px)
+{
+
+.projects-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    grid-gap: 50px;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+}
+
+@media screen and (max-width:600px)
+{
+
+.contact-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    grid-gap: 50px;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
 }
 
